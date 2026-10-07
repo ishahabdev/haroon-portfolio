@@ -10,9 +10,17 @@ export default async function handler(req, res) {
   const sender = globalThis.process?.env.RESEND_FROM_EMAIL;
 
   if (!apiKey || !sender) {
-    console.error("Contact form email is missing its Resend configuration.");
+    const missingVariables = [
+      !apiKey && "RESEND_API_KEY",
+      !sender && "RESEND_FROM_EMAIL",
+    ].filter(Boolean);
+
+    console.error(
+      `Contact form email configuration is missing: ${missingVariables.join(", ")}`
+    );
     return res.status(503).json({
-      error: "Message delivery is temporarily unavailable. Please try again later.",
+      error:
+        "Email delivery is not configured for this deployment. Please contact the site owner.",
     });
   }
 

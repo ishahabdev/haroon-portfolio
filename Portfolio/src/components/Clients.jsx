@@ -62,7 +62,7 @@ export default function Clients() {
       className="bg-[#111715] px-6 py-20 font-['Inter',sans-serif] sm:px-10 lg:px-20"
     >
       <div className="mx-auto max-w-6xl">
-        <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#3fb68b]">
+        <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#198161]">
           Selected clients &amp; projects
         </p>
         <h2 className="mt-4 font-['Space_Grotesk',sans-serif] text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
@@ -95,7 +95,7 @@ export default function Clients() {
                 href={c.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-auto inline-flex items-center gap-2 pt-7 text-[15px] font-medium text-[#3fb68b] hover:text-[#7ee8b5]"
+                className="mt-auto inline-flex items-center gap-2 pt-7 text-[15px] font-medium text-[#198161] hover:text-[#198161]"
               >
                 {c.linkLabel}
                 <ExternalIcon />

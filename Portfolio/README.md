@@ -1,16 +1,18 @@
-# React + Vite
+# Haroon Gulzar Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Contact form email delivery
 
-Currently, two official plugins are available:
+The contact form sends messages through the Vercel serverless function at
+`api/send-message.js` and Resend. Messages are delivered to
+`haroongulzar226@gmail.com`.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+In your Vercel project settings, add these environment variables to each
+deployment environment:
 
-## React Compiler
+- `RESEND_API_KEY`: an API key from Resend.
+- `RESEND_FROM_EMAIL`: an email address verified with Resend, such as
+  `Portfolio <contact@your-verified-domain.com>`.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Redeploy after adding the variables. For local development, use `vercel dev`
+from the `Portfolio` directory with the same variables configured locally;
+Vite alone does not run Vercel API functions.

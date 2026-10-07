@@ -77,7 +77,7 @@ export default function Stack() {
       className="bg-[#111715] px-6 py-20 font-['Inter',sans-serif] sm:px-10 lg:px-20"
     >
       <div className="mx-auto max-w-6xl">
-        <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#3fb68b]">
+        <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#198161]">
           Technical expertise
         </p>
         <h2 className="mt-4 font-['Space_Grotesk',sans-serif] text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
@@ -90,7 +90,7 @@ export default function Stack() {
         <div className="mt-14 space-y-12">
           {CATEGORIES.map((c) => (
             <div key={c.label}>
-              <h3 className="text-xs font-bold uppercase tracking-[0.15em] text-[#3fb68b]">
+              <h3 className="text-xs font-bold uppercase tracking-[0.15em] text-[#198161]">
                 {c.label}
               </h3>
 
@@ -107,7 +107,7 @@ export default function Stack() {
                   {c.chips.map((chip) => (
                     <li
                       key={chip}
-                      className="rounded-lg border border-[#3fb68b]/30 bg-[#3fb68b]/10 px-3.5 py-1.5 text-sm font-medium text-[#3fb68b]"
+                      className="rounded-lg border border-[#3fb68b]/30 bg-[#3fb68b]/10 px-3.5 py-1.5 text-sm font-medium text-[#198161]"
                     >
                       {chip}
                     </li>

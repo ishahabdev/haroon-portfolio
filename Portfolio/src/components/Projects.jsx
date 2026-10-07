@@ -92,8 +92,7 @@ function ProjectCard({ p }) {
   const [open, setOpen] = useState(false);
 
   return (
-    <article className="grid overflow-hidden rounded-2xl border border-[#3fb68b]/40 bg-white/3 shadow-[0_0_40px_rgba(63,182,139,0.08)] lg:grid-cols-[1.05fr_1fr]">
-      {/* Left: browser mockup */}
+<article className="grid overflow-hidden rounded-2xl border border-white/10 bg-white/3 transition-all duration-300 hover:border-[#3fb68b]/50 hover:shadow-[0_0_40px_rgba(63,182,139,0.18)] lg:grid-cols-[1.05fr_1fr]">      {/* Left: browser mockup */}
       <div className="border-b border-white/10 p-5 sm:p-8 lg:border-b-0 lg:border-r" style={gridBg}>
         <div className="overflow-hidden rounded-xl border border-white/10 bg-[#0f1412]">
           <div className="flex items-center gap-3 px-4 py-3">
@@ -110,7 +109,7 @@ function ProjectCard({ p }) {
             <img src={p.image} alt={p.title} className="aspect-4/3 w-full object-cover" />
           ) : (
             <div className="flex aspect-4/3 items-center justify-center bg-linear-to-br from-[#1a2622] to-[#0f1412] p-8 text-center">
-              <span className="font-['Space_Grotesk',sans-serif] text-2xl font-bold text-[#7ee8b5] sm:text-3xl">
+              <span className="font-['Space_Grotesk',sans-serif] text-2xl font-bold text-[#198161] sm:text-3xl">
                 {p.title}
               </span>
             </div>
@@ -120,7 +119,7 @@ function ProjectCard({ p }) {
 
       {/* Right: details */}
       <div className="flex flex-col p-6 sm:p-8">
-        <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#3fb68b]">
+        <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#198161]">
           {p.category}
         </p>
 
@@ -130,7 +129,7 @@ function ProjectCard({ p }) {
             {p.status}
           </span>
           {p.pinned && (
-            <span className="inline-flex items-center gap-1.5 rounded-full border border-[#3fb68b]/50 px-3 py-1.5 text-xs font-medium uppercase tracking-wide text-[#3fb68b]">
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-[#3fb68b]/50 px-3 py-1.5 text-xs font-medium uppercase tracking-wide text-[#198161]">
               <Svg className="h-3 w-3">
                 <path d="M12 17v5M9 10.8a2 2 0 0 1-1.1 1.8l-1.8.9A2 2 0 0 0 5 15.2V17h14v-1.8a2 2 0 0 0-1.1-1.8l-1.8-.9a2 2 0 0 1-1.1-1.8V6a3 3 0 0 0 1-2H8a3 3 0 0 0 1 2Z" />
               </Svg>
@@ -158,8 +157,8 @@ function ProjectCard({ p }) {
           ))}
         </ul>
 
-        <div className="mt-6 flex flex-wrap items-center gap-6 text-[15px] font-medium text-[#3fb68b]">
-          <a href={p.demo} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 hover:text-[#7ee8b5]">
+        <div className="mt-6 flex flex-wrap items-center gap-6 text-[15px] font-medium text-[#198161]">
+          <a href={p.demo} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 hover:text-[#198161]">
             Live Demo
             <Svg>
               <path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
@@ -169,7 +168,7 @@ function ProjectCard({ p }) {
             type="button"
             onClick={() => setOpen((o) => !o)}
             aria-expanded={open}
-            className="inline-flex items-center gap-2 hover:text-[#7ee8b5]"
+            className="inline-flex items-center gap-2 hover:text-[#198161]"
           >
             View Case Study
             <Svg className={`h-4 w-4 transition-transform ${open ? "rotate-180" : ""}`}>
@@ -197,7 +196,7 @@ export default function Projects() {
       <div className="mx-auto max-w-6xl">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
-            <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#3fb68b]">
+            <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#198161]">
               Projects
             </p>
             <h2 className="mt-4 font-['Space_Grotesk',sans-serif] text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
@@ -209,9 +208,9 @@ export default function Projects() {
           </p>
         </div>
 
-        <div className="mt-12 flex flex-col gap-8">
+        <div className="mt-12  flex flex-col gap-8 ">
           {PROJECTS.map((p) => (
-            <ProjectCard key={p.title} p={p} />
+            <ProjectCard  key={p.title} p={p} />
           ))}
         </div>
       </div>

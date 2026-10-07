@@ -1,5 +1,6 @@
-import { useState, useEffect } from 'react';
-import { Sun, Moon, Menu, X } from 'lucide-react';
+import { useState } from 'react';
+import { Menu, X } from 'lucide-react';
+import ThemeToggle from './ThemeToggle';
 
 const links = [
   { label: 'About', href: '#about' },
@@ -11,20 +12,15 @@ const links = [
 
 const Navbar = () => {
   const brand = 'Haroon'; // change to your name
-  const [dark, setDark] = useState(true);
   const [open, setOpen] = useState(false);
 
-  useEffect(() => {
-    document.documentElement.classList.toggle('dark', dark);
-  }, [dark]);
-
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-white/[0.02] backdrop-blur-xl backdrop-saturate-150">
-      <nav className="mx-auto flex h-14 max-w-[1200px] items-center justify-between px-6">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-white/2 backdrop-blur-xl backdrop-saturate-150">
+      <nav className="mx-auto flex h-14 max-w-300 items-center justify-between px-6">
         {/* Logo */}
         <a href="#" className="text-lg font-bold tracking-tight text-white">
           {brand}
-          <span className="text-emerald-500">.</span>
+          <span className="text-[#198161]">.</span>
         </a>
 
         {/* Desktop links */}
@@ -43,13 +39,7 @@ const Navbar = () => {
 
         {/* Right side */}
         <div className="flex items-center gap-4">
-          <button
-            onClick={() => setDark(!dark)}
-            aria-label="Toggle theme"
-            className="text-[#9aa5a1] transition-colors hover:text-white"
-          >
-            {dark ? <Sun size={18} /> : <Moon size={18} />}
-          </button>
+          <ThemeToggle />
 
           <a
             href="#contact"

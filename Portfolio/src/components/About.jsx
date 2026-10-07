@@ -65,13 +65,13 @@ export default function About() {
       className="bg-[#111715] px-6 py-20 font-['Inter',sans-serif] text-[#9aa5a0] sm:px-10 lg:px-20"
     >
       <div className="mx-auto max-w-6xl">
-        <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#3fb68b]">
+        <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#198161]">
           About
         </p>
 
         <h4 className="mt-4 font-['Space_Grotesk',sans-serif] text-xl font-bold tracking-tight text-white sm:text-3xl lg:text-5xl">
-  <span className="text-[#7ee8b5]">Data Science</span> &amp;{" "}
-  <span className="text-[#7ee8b5]">Python</span> Developer.
+  <span className="text-[#198161]">Data Science</span> &amp;{" "}
+  <span className="text-[#198161]">Python</span> Developer.
 </h4>
 
         <div className="mt-14 grid gap-12 lg:grid-cols-[1fr_520px] lg:gap-16">
@@ -106,7 +106,7 @@ export default function About() {
       key={s.label}
       className="flex aspect-square flex-col  rounded-2xl border border-white/10 bg-white/[0.03] p-5 transition-all duration-300 hover:border-emerald-500/40 hover:shadow-[0_0_30px_rgba(16,185,129,0.15)]"
     >
-      <span className="font-['Space_Grotesk',sans-serif] text-3xl font-bold text-[#3fb68b] sm:text-4xl">
+      <span className="font-['Space_Grotesk',sans-serif] text-3xl font-bold text-[#198161] sm:text-4xl">
         {s.value}
       </span>
       <span className="mt-2 text-sm text-[#9aa5a0]">{s.label}</span>
@@ -116,19 +116,19 @@ export default function About() {
         </div>
 
         <div className="mt-24">
-          <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#3fb68b]">
+          <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#198161]">
             Why choose me
           </p>
           <h3 className="mt-4 font-['Space_Grotesk',sans-serif] text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Why Work With <span className="text-[#7ee8b5]">Me?</span>
+            Why Work With <span className="text-[#198161]">Me?</span>
           </h3>
 <div className="mt-12 grid gap-5 md:grid-cols-2">
   {FEATURES.map((f) => (
     <div
       key={f.title}
-      className="rounded-2xl border border-[#3fb68b]/40 bg-white/[0.03] p-6 transition-transform duration-700 ease-out hover:-translate-y-2 sm:p-7"
+      className="rounded-2xl  bg-[#16201b] p-6 transition-transform duration-900 ease-out hover:-translate-y-2 sm:p-7"
     >
-      <span className="text-[#3fb68b]">{f.icon}</span>
+      <span className="text-[#198161]">{f.icon}</span>
       <h4 className="mt-5 font-['Space_Grotesk',sans-serif] text-lg font-semibold text-white">
         {f.title}
       </h4>
@@ -138,7 +138,7 @@ export default function About() {
     </div>
   ))}
 </div>
-          <blockquote className="mt-6 rounded-2xl border border-l-4 border-[#3fb68b]/40 border-l-[#3fb68b] bg-[#3fb68b]/[0.06] px-6 py-5 text-base italic text-[#7ee8b5]">
+          <blockquote className="mt-6 rounded-2xl border border-l-4 border-[#3fb68b]/40 border-l-[#3fb68b] bg-[#3fb68b]/[0.06] px-6 py-5 text-base italic text-[#198161]">
             "If you're looking for someone who understands both data and
             business impact — you're in the right place."
           </blockquote>

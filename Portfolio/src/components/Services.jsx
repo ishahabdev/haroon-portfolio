@@ -81,8 +81,8 @@ export default function Services() {
       id="services"
       className="bg-[#111715] px-6 py-20 font-['Inter',sans-serif] sm:px-10 lg:px-20"
     >
-      <div className="mx-auto max-w-6xl">
-        <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#3fb68b]">
+      <div className="mx-auto max-w-6xl ">
+        <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#198161]">
           Services
         </p>
         <h2 className="mt-4 font-['Space_Grotesk',sans-serif] text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
@@ -92,24 +92,24 @@ export default function Services() {
           Focused on business outcomes — not just the stack behind them.
         </p>
 
-        <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {SERVICES.map((s) => (
-            <div
-              key={s.title}
-              className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 sm:p-7"
-            >
-              <span className="flex h-11 w-11 items-center justify-center rounded-xl border border-[#3fb68b]/30 bg-[#3fb68b]/10 text-[#3fb68b]">
-                {s.icon}
-              </span>
-              <h3 className="mt-6 font-['Space_Grotesk',sans-serif] text-lg font-semibold text-white">
-                {s.title}
-              </h3>
-              <p className="mt-3 text-[15px] leading-relaxed text-[#9aa5a0]">
-                {s.text}
-              </p>
-            </div>
-          ))}
-        </div>
+      <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+  {SERVICES.map((s) => (
+    <div
+      key={s.title}
+      className="rounded-2xl border-2 border-white/10 bg-[#131A18] p-6 transition-all duration-300 hover:border-[#3fb68b]/60 hover:shadow-[0_0_30px_rgba(63,182,139,0.2)] sm:p-7"
+    >
+      <span className="flex h-11 w-11 items-center justify-center rounded-xl border border-[#3fb68b]/30 bg-[#3fb68b]/10 text-[#198161]">
+        {s.icon}
+      </span>
+      <h3 className="mt-6 font-['Space_Grotesk',sans-serif] text-lg font-semibold text-white">
+        {s.title}
+      </h3>
+      <p className="mt-3 text-[15px] leading-relaxed text-[#9aa5a0]">
+        {s.text}
+      </p>
+    </div>
+  ))}
+</div>
       </div>
     </section>
   );

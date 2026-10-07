@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import resumeUrl from "../assets/haroon_cv1.pdf";
 
 const SPECIALTIES = [
   "Machine Learning & Modeling",
@@ -7,8 +8,6 @@ const SPECIALTIES = [
 ];
 
 const AGENT_URL = "https://wa.me/18735100429";
-const RESUME_URL = "https://adil-p.netlify.app/Muhammad-Adil-Resume.pdf";
-
 function useTypewriter(words, typeMs = 70, pauseMs = 1600) {
   const [index, setIndex] = useState(0);
   const [text, setText] = useState("");
@@ -57,7 +56,7 @@ export default function Hero() {
     <section className="flex min-h-screen items-center bg-linear-to-br from-[#111715] to-[#0d1210] px-6 py-20 font-['Inter',sans-serif] text-[#e8eeeb] sm:px-10 lg:px-20">
       <div className="mx-auto w-full max-w-6xl">
         <h1 className="max-w-3xl font-['Space_Grotesk',sans-serif] text-4xl font-bold leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl">
-          <span className="text-[#7ee8b5]">Data Scientist</span> &amp; Python
+          <span className="text-[#198161]">Data Scientist</span> &amp; Python
           Developer for businesses.
         </h1>
 
@@ -71,7 +70,7 @@ export default function Hero() {
         <p className="mt-10 flex flex-wrap items-center gap-x-3 text-base text-[#9aa5a0] sm:text-lg">
           <span>Specialized in</span>
           <span
-            className="font-['Space_Grotesk',sans-serif] font-semibold text-[#3fb68b]"
+            className="font-['Space_Grotesk',sans-serif] font-semibold text-[#198161]"
             aria-live="polite"
           >
             {specialty}
@@ -82,10 +81,9 @@ export default function Hero() {
         <div className="mt-8 flex flex-wrap gap-2">
           
           <a
-            href={RESUME_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 rounded-xl border border-[#3fb68b]/30 bg-[#3fb68b]/2 px-4 py-3 font-['Space_Grotesk',sans-serif] font-medium text-[#3fb68b] transition-colors hover:bg-[#3fb68b]/15 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#3fb68b]"
+            href={resumeUrl}
+            download="haroon_cv.pdf"
+            className="inline-flex items-center gap-3 rounded-xl border border-[#3fb68b]/30 bg-[#3fb68b]/2 px-4 py-3 font-['Space_Grotesk',sans-serif] font-medium text-[#198161] transition-colors hover:bg-[#3fb68b]/15 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#3fb68b]"
           >
             <FileDownIcon />
             Download Resume
@@ -94,7 +92,7 @@ export default function Hero() {
             href={AGENT_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 rounded-xl border border-[#3fb68b] bg-[#3fb68b]/10 px-6 w-44 py-3 font-['Space_Grotesk',sans-serif] font-medium text-[#3fb68b] transition-colors hover:bg-[#3fb68b]/20 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#3fb68b]"
+            className="inline-flex items-center gap-3 rounded-xl border border-[#3fb68b] bg-[#3fb68b]/10 px-6 w-44 py-3 font-['Space_Grotesk',sans-serif] font-medium text-[#198161] transition-colors hover:bg-[#3fb68b]/20 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#3fb68b]"
           >
             <ChatIcon />
             Hire Me

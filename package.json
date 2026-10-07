@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "dev": "npm --prefix Portfolio run dev --"
+    "dev": "npm --prefix Portfolio run dev:vercel --"
   },
   "dependencies": {
     "nodemailer": "^10.0.16"

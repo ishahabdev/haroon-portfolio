@@ -1,5 +1,18 @@
 # Haroon Gulzar Portfolio
 
+## Vercel setup
+
+The app root contains `package.json`, `src/`, and `api/`. Set the Vercel
+project's **Root Directory** to `Portfolio` so Vercel detects the Vite app and
+the `api/send-message.js` function together. `vercel.json` configures the Vite
+build output; no catch-all rewrite is used, so `/api` requests reach the
+serverless function.
+
+Run `npm run dev` from the repository root to start Vercel's local development
+server, including API routes. The first run may ask you to install the Vercel
+CLI or link the project. Vite's `npm run dev` in `Portfolio/` alone does not
+serve the API function.
+
 ## Contact form email delivery
 
 The contact form sends messages through the Vercel serverless function at

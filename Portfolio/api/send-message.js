@@ -59,7 +59,7 @@ export default async function handler(req, res) {
     });
 
     if (!response.ok) {
-      console.error("Resend rejected a contact form message:", response.status);
+      console.error("Resend rejected:", response.status, await response.text());
       return res.status(502).json({
         error: "Your message could not be sent. Please try again later.",
       });
